@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anasayfa | Ferhat Yiğit</title>
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+</head>
+
+<body class="overflow-x-hidden dark:bg-gray-950 dark:text-gray-100 transition-colors duration-300">
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-70%] dark:hidden">
+        <img src="./assets/img/ui/header-bg-color.png" alt="" class="w-full" />
+    </div>
+    <nav
+        class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 dark:bg-gray-900/90 dark:border-b dark:border-gray-800 transition-colors duration-300">
+        <!-- <img src="./assets/img/icons/logo.png" alt="logo" class="w-28 cursor-pointer" /> -->
+
+        <h1 class="w-auto cursor-pointer flex items-center gap-0.5"><span
+                class="font-black text-3xl tracking-normal dark:text-white">FERHAT</span><span
+                class="text-blue-600 text-6xl leading-none mb-2">.</span>
+        </h1>
+        <ul
+            class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 dark:bg-gray-800 dark:bg-opacity-50 dark:text-gray-200">
+            <li><a href="#top">ana sayfa</a></li>
+            <li><a href="#about">hakkımda</a></li>
+            <li><a href="#skills">yetenekler</a></li>
+            <li><a href="all-projects.html" class="hover:text-blue-600 transition-colors">çalışmalarım</a></li>
+            <li><a href="contact.html">iletişim</a></li>
+        </ul>
+        <div class="flex items-center gap-4">
+            <button id="theme-toggle"
+                class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"><img id="theme-icon"
+                    src="./assets/img/icons/moon_icon.png" alt="" class="w-6" /></button>
+            <a href="contact.html"
+                class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4">iletişim
+                <img src="./assets/img/icons/arrow-icon.png" class="w-3" alt="" />
+            </a>
+
+            <button class="block md:hidden ml-3" onclick="openMenu()">
+                <img src="./assets/img/icons/menu-black.png" alt="" class="w-6 dark:invert" />
+            </button>
+        </div>
+        <!-- ---------------------- KUCUK EKRANLAR ICIN MENU ----------------------- -->
+        <ul id="sideMenu"
+            class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-white dark:bg-gray-900 dark:text-white transition duration-500 shadow-2xl">
+            <div class="absolute right-6 top-6" onclick="closeMenu()">
+                <img src="./assets/img/icons/close-black.png" alt="" class="w-5 cursor-pointer dark:invert" />
+            </div>
+            <li><a href="#top" onclick="closeMenu()" class="hover:text-blue-600 dark:hover:text-blue-400">ana sayfa</a>
+            </li>
+            <li><a href="#about" onclick="closeMenu()" class="hover:text-blue-600 dark:hover:text-blue-400">hakkımda</a>
+            </li>
+            <li><a href="#skills" onclick="closeMenu()"
+                    class="hover:text-blue-600 dark:hover:text-blue-400">yetenekler</a></li>
+            <li><a href="#projects" onclick="closeMenu()"
+                    class="hover:text-blue-600 dark:hover:text-blue-400">çalışmalarım</a></li>
+            <li><a href="contact.html" onclick="closeMenu()"
+                    class="hover:text-blue-600 dark:hover:text-blue-400">iletişim</a></li>
+        </ul>
+    </nav>
+
+    <!-- ---------------------------- HEADER KISMI ----------------------------- -->
+    <div class="w-11/12 max-w-4xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+        <img src="./assets/img/memoji/hello2.PNG" alt="" class=" w-36">
+        <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-1 dark:text-gray-200">merhaba! ben Ferhat <img
+                src="./assets/img/ui/hand-icon.png" alt="" class="w-6"></h3>
+        <h1 class="text-3xl sm:text-6xl lg:text-[66px] dark:text-white">full stack developer based in Istanbul. </h1>
+        <p class="max-w-2xl mx-auto dark:text-gray-400">Analitik problem çözme disiplinini, üretme ve
+            geliştirme tutkusuyla birleştiren <span class="text-blue-600 font-bold">Full Stack Developer</span>.
+            Modern web teknolojileri ile ölçeklenebilir ve kullanıcı dostu projeler üretiyorum.</p>
+
+        <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+            <a href="contact.html"
+                class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2 hover:shadow-lg hover:shadow-orange-500/30 transition-all">iletişim
+                kuralım? <img src="./assets/img/icons/right-arrow-white.png" alt="" class="w-4"></a>
+            <!-- <a href="./extras/Ferhat_Yigit_CV.pdf" download
+                class="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:bg-transparent dark:text-white dark:border-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">özgeçmişim<img
+                    src="./assets/img/icons/download-icon.png" alt="" class="w-4 dark:invert"></a> -->
+        </div>
+
+    </div>
+
+    <!-- ----------------------------- ABOUT KISMI ----------------------------- -->
+
+
+    <div id="about" class="w-full px-[12%] py-10 scroll-mt-20">
+        <h4 class="text-center text-xl mb-3">kendimi tanıtayım</h4>
+        <h2 class="text-center text-5xl">ben kimim?</h2>
+
+        <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
+            <div class="max-w-max mx-auto relative">
+
+                <img src="./assets/img/memoji/hello.PNG" alt="" class="w-64 sm:w-80 max-w-none">
+
+                <div class="bg-white w-1/3 aspect-square absolute right-0 bottom-0 rounded-full translate-x-1/4 translate-y-1/3 shadow-[0_4px_55px_rgba
+                (149,0, 162, 0.15)] flex items-center justify-center">
+                    <img src="./assets/img/ui/circular-text.png" alt="" class="w-full">
+                    <img src="./assets/img/ui/pcFocus.PNG" alt=""
+                        class="w-2/5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-6">
+                </div>
+            </div>
+            <div class="flex-1">
+                <p class="mb-10 max-w-2xl text-center lg:text-left dark:text-gray-300">Mekatronik geçmişimden gelen
+                    analitik
+                    düşünme yapısını, modern web teknolojileri (MERN Stack) ile birleştiriyorum. Katmanlı mimari, API
+                    güvenliği ve temiz kod prensiplerine sadık kalarak, hem backend hem de frontend tarafında
+                    ölçeklenebilir çözümler geliştiriyorum. Hızlı öğrenen, teknolojik adaptasyonu yüksek ve sürekli
+                    gelişime odaklı bir yaklaşımla projeler üretiyorum.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------------------- SKILLS KISMI ----------------------------- -->
+
+    <div id="skills"
+        class="w-full px-[12%] py-10 scroll-mt-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+        <h4 class="text-center text-xl mb-3 dark:text-gray-400">kariyer & gelişim</h4>
+        <h2 class="text-center text-5xl mb-12 dark:text-white">yetenekler & deneyim</h2>
+
+        <div class="flex flex-col gap-12 max-w-4xl mx-auto">
+
+            <!-- Cards Section -->
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center">
+                <!-- Languages & Frameworks -->
+                <li
+                    class="border-[0.5px] border-gray-400 bg-white dark:bg-gray-800 dark:border-gray-700 rounded-xl p-8 hover:bg-[#BBC5F3] dark:hover:bg-gray-700 hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000] dark:hover:shadow-[4px_4px_0_#fff] flex flex-col h-full transition-all">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="p-3 bg-gray-100 dark:bg-gray-700 rounded-lg">
+                            <img src="./assets/img/icons/code-icon.png" alt="" class="w-6 dark:invert">
+                        </div>
+                        <h3 class="font-bold text-xl text-gray-800 dark:text-gray-100">Diller & Frameworkler</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <!-- JS -->
+                        <span
+                            class="flex items-center gap-2 px-3 py-2 bg-gray-50 text-gray-700 text-xs font-bold rounded-lg border border-gray-200 hover:bg-yellow-50 hover:border-yellow-200 transition-colors">
+                            <svg class="w-5 h-5 rounded-sm" viewBox="0 0 24 24" fill="#F7DF1E">
+                                <path d="M0 0h24v24H0V0z" fill="none" />
+                                <path d="M3 3h18v18H3V3z" fill="#F7DF1E" />
+                                <path d="M11.5 15.5h-1.5v-3h1.5v3zm4.5 0h-1.5v-3h1.5v3z" fill="#000" />
+                                <path
+                                    d="M18.8 17.5c-.8.5-1.8.8-2.6.8-2.3 0-3.6-1.5-3.6-3.7v-3h2.3v3c0 .8.2 1.4 1 1.4.5 0 .8-.2.8-.8v-.5h-1.3v-1.7h3.3v4.5zM12 17.5c-.7 0-1.3-.2-1.8-.5l.5-1.7c.4.2.8.4 1.2.4.5 0 .7-.2.7-.5 0-.3-.3-.4-1-.6-1.2-.4-2-.9-2-2.1 0-1.3 1-2.2 2.6-2.2.8 0 1.5.2 2 .5l-.5 1.6c-.4-.2-.8-.4-1.2-.4-.4 0-.6.2-.6.4 0 .3.4.4 1.1.6 1.3.4 2 1.1 2 2.2 0 1.3-1.1 2.3-2.9 2.3z"
+                                    fill="#000" />
+                            </svg>
+                            JavaScript
+                        </span>
+                        <!-- TS -->
+                        <span
+                            class="flex items-center gap-2 px-3 py-2 bg-gray-50 text-gray-700 text-xs font-bold rounded-lg border border-gray-200 hover:bg-blue-50 hover:border-blue-200 transition-colors">
+                            <svg class="w-5 h-5 rounded-sm" viewBox="0 0 24 24" fill="#3178C6">
+                                <path d="M2 2h20v20H2V2z" fill="#3178C6" />
+                                <path d="M12.8 16h-2v-6h-2v6h-2v-8h6v8zm2-8h5.5v1.5h-2v6.5h-2v-6.5h-1.5V8z"
+                                    fill="#FFF" />
+                            </svg>
+                            TypeScript
+                        </span>
+                        <!-- React -->
+                        <span
+                            class="flex items-center gap-2 px-3 py-2 bg-gray-50 text-gray-700 text-xs font-bold rounded-lg border border-gray-200 hover:bg-cyan-50 hover:border-cyan-200 transition-colors">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="2" fill="#61DAFB" />
+                                <ellipse rx="10" ry="4.5" transform="rotate(60 12 12)" stroke="#61DAFB"
+                                    stroke-width="1.5" />
+                                <ellipse rx="10" ry="4.5" transform="rotate(120 12 12)" stroke="#61DAFB"
+                                    stroke-width="1.5" />
+                                <ellipse rx="10" ry="4.5" transform="rotate(0 12 12)" stroke="#61DAFB"
+                                    stroke-width="1.5" />
+                            </svg>
+                            React.js
+                        </span>
+                        <!-- Node -->
+                        <span
+                            class="flex items-center gap-2 px-3 py-2 bg-gray-50 text-gray-700 text-xs font-bold rounded-lg border border-gray-200 hover:bg-green-50 hover:border-green-200 transition-colors">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#339933">
+                                <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" />
+                                <path
+                                    d="M12 18C13.5 18 14.5 17 14.5 15.5C14.5 14 13.5 13 12 13C10.5 13 9.5 14 9.5 15.5C9.5 17 10.5 18 12 18Z"
+                                    fill="white" />
+                            </svg>
+                            Node.js
+                        </span>
+                        <!-- Express -->
+                        <span
+                            class="flex items-center gap-2 px-3 py-2 bg-gray-50 text-gray-700 text-xs font-bold rounded-lg border border-gray-200 hover:bg-gray-100 hover:border-gray-300 transition-colors">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="black">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M8 12H16" stroke="white" stroke-width="2" />
+                            </svg>
+                            Express.js
+                        </span>
+                        <!-- MongoDB -->
+                        <span
+                            class="flex items-center gap-2 px-3 py-2 bg-gray-50 text-gray-700 text-xs font-bold rounded-lg border border-gray-200 hover:bg-green-50 hover:border-green-200 transition-colors">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#47A248">
+                                <path d="M12 2C12 2 4 10 4 15C4 19 8 22 12 22C16 22 20 19 20 15C20 10 12 2 12 2Z" />
+                                <path d="M12 22V2" stroke="white" stroke-width="1" />
+                            </svg>
+                            MongoDB
+                        </span>
+                        <!-- Mongoose -->
+                        <span
+                            class="flex items-center gap-2 px-3 py-2 bg-gray-50 text-gray-700 text-xs font-bold rounded-lg border border-gray-200 hover:bg-red-50 hover:border-red-200 transition-colors">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#880000">
+                                <path
+                                    d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
+                                    fill="#880000" />
+                                <path d="M7 12H17" stroke="white" stroke-width="2" />
+                            </svg>
+                            Mongoose
+                        </span>
+                        <!-- HTML5 -->
+                        <span
+                            class="flex items-center gap-2 px-3 py-2 bg-gray-50 text-gray-700 text-xs font-bold rounded-lg border border-gray-200 hover:bg-orange-50 hover:border-orange-200 transition-colors">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#E34F26">
+                                <path d="M2.5 2H21.5L19.5 19L12 21.5L4.5 19L2.5 2Z" />
+                                <path
+                                    d="M17 17L12 19L7 17L6.5 12H15.5L15 15.5L12 16.5L9 15.5L8.5 14H6.5L7.5 17L12 18.5L16.5 17L17.5 10H8L7.5 8H18L18.5 4H5L5.5 8H3.5L3 2H21L20.5 8H19.5L19 19Z"
+                                    fill="white" />
+                            </svg>
+                            HTML5
+                        </span>
+                        <!-- CSS3 -->
+                        <span
+                            class="flex items-center gap-2 px-3 py-2 bg-gray-50 text-gray-700 text-xs font-bold rounded-lg border border-gray-200 hover:bg-blue-50 hover:border-blue-200 transition-colors">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#1572B6">
+                                <path d="M2.5 2H21.5L19.5 19L12 21.5L4.5 19L2.5 2Z" />
+                                <path
+                                    d="M17 17L12 19L7 17L6.5 12H15.5L15 15.5L12 16.5L9 15.5L8.5 14H6.5L7.5 17L12 18.5L16.5 17L17.5 10H8L7.5 8H18L18.5 4H5L5.5 8H3.5L3 2H21L20.5 8H19.5L19 19Z"
+                                    fill="white" />
+                            </svg>
+                            CSS3
+                        </span>
+                        <!-- Tailwind -->
+                        <span
+                            class="flex items-center gap-2 px-3 py-2 bg-gray-50 text-gray-700 text-xs font-bold rounded-lg border border-gray-200 hover:bg-cyan-50 hover:border-cyan-200 transition-colors">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M12.0001 6C12.0001 6 15.0001 3 18.0001 3C21.0001 3 24.0001 6 20.0001 9C16.0001 12 15.0001 12 15.0001 12C15.0001 12 12.0001 15 9.0001 15C6.0001 15 3.0001 12 7.0001 9C11.0001 6 12.0001 6Z"
+                                    fill="#38BDF8" />
+                                <path
+                                    d="M6.0001 13C6.0001 13 9.0001 10 12.0001 10C15.0001 10 18.0001 13 14.0001 16C10.0001 19 9.0001 19 9.0001 19C9.0001 19 6.0001 22 3.0001 22C0.0001 22 -2.9999 19 1.0001 16C5.0001 13 6.0001 13 6.0001 13Z"
+                                    fill="#38BDF8" />
+                            </svg>
+                            Tailwind CSS
+                        </span>
+                    </div>
+                </li>
+
+                <!-- Education & Mentorship -->
+                <li
+                    class="border-[0.5px] border-gray-400 bg-white dark:bg-gray-800 dark:border-gray-700 rounded-xl p-8 hover:bg-[#BBC5F3] dark:hover:bg-gray-700 hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000] dark:hover:shadow-[4px_4px_0_#fff] flex flex-col h-full transition-all">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="p-3 bg-gray-100 dark:bg-gray-700 rounded-lg">
+                            <img src="./assets/img/icons/edu-icon.png" alt="" class="w-6 dark:invert">
+                        </div>
+                        <h3 class="font-bold text-xl text-gray-800 dark:text-gray-100">Eğitim & Deneyim</h3>
+                    </div>
+                    <div class="space-y-6">
+                        <!-- Edu 1 -->
+                        <div class="flex items-start gap-4 group">
+                            <div
+                                class="w-12 h-12 rounded-full bg-white p-1 flex items-center justify-center shrink-0 transition-colors">
+                                <img src="./assets/img/logos/marmara-logo.png" alt="Marmara Logo"
+                                    class="w-full h-full object-contain rounded-full">
+                            </div>
+                            <div>
+                                <h4
+                                    class="font-bold text-gray-800 dark:text-gray-100 text-sm group-hover:text-blue-600 transition-colors">
+                                    Marmara Üniversitesi</h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-xs">Bilgisayar Programcılığı</p>
+                                <span class="text-[10px] text-gray-400 dark:text-gray-500 font-medium">2025 -
+                                    Günümüz</span>
+                            </div>
+                        </div>
+                        <!-- Edu 2 -->
+                        <div class="flex items-start gap-4 group">
+                            <div
+                                class="w-12 h-12 rounded-full bg-white p-1 flex items-center justify-center shrink-0 transition-colors">
+                                <img src="./assets/img/logos/deu-logo.png" alt="DEU Logo"
+                                    class="w-full h-full object-contain rounded-full">
+                            </div>
+                            <div>
+                                <h4
+                                    class="font-bold text-gray-800 dark:text-gray-100 text-sm group-hover:text-blue-600 transition-colors">
+                                    Dokuz Eylül Üniversitesi</h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-xs">Mekatronik</p>
+                                <span class="text-[10px] text-gray-400 dark:text-gray-500 font-medium">2022 -
+                                    2026</span>
+                            </div>
+                        </div>
+                        <div class="border-t border-gray-100 my-2"></div>
+                        <!-- Mentorship -->
+                        <div class="flex items-start gap-4 group">
+                            <div
+                                class="w-12 h-12 rounded-full bg-white p-1 flex items-center justify-center shrink-0 transition-colors">
+                                <img src="./assets/img/logos/jti-logo.png" alt="JTI Logo"
+                                    class="w-full h-full object-contain">
+                            </div>
+                            <div>
+                                <h4
+                                    class="font-bold text-gray-800 dark:text-gray-100 text-sm group-hover:text-green-600 transition-colors">
+                                    JTI (Japan Tobacco Int.)</h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-xs">Mentee Programı</p>
+                                <span
+                                    class="text-[10px] text-green-600 font-medium bg-green-50 px-2 py-0.5 rounded-full inline-block mt-1">Mentorship</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- Tools List -->
+            <div class="flex flex-col items-center">
+                <h4 class="my-6 text-gray-700 font-semibold text-lg">kullandığım araçlar</h4>
+                <ul class="flex flex-wrap items-center justify-center gap-3 sm:gap-5">
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 bg-white rounded-lg cursor-pointer hover:-translate-y-1 duration-500 hover:shadow-md"
+                        title="VS Code">
+                        <img src="./assets/img/icons/vscode.png" alt="VS Code" class="w-5 sm:w-7">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 bg-white rounded-lg cursor-pointer hover:-translate-y-1 duration-500 hover:shadow-md"
+                        title="Git">
+                        <img src="./assets/img/icons/git.png" alt="Git" class="w-5 sm:w-7">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 bg-white rounded-lg cursor-pointer hover:-translate-y-1 duration-500 hover:shadow-md"
+                        title="MongoDB">
+                        <img src="./assets/img/icons/mongodb.png" alt="MongoDB" class="w-5 sm:w-7">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 bg-white rounded-lg cursor-pointer hover:-translate-y-1 duration-500 hover:shadow-md"
+                        title="Figma">
+                        <img src="./assets/img/icons/figma.png" alt="Figma" class="w-5 sm:w-7">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 bg-white rounded-lg cursor-pointer hover:-translate-y-1 duration-500 hover:shadow-md"
+                        title="React">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                fill="#222" />
+                            <circle cx="12" cy="12" r="2" fill="#61DAFB" />
+                            <ellipse rx="10" ry="4.5" transform="rotate(60 12 12)" stroke="#61DAFB" stroke-width="1.5"
+                                fill="none" />
+                            <ellipse rx="10" ry="4.5" transform="rotate(120 12 12)" stroke="#61DAFB" stroke-width="1.5"
+                                fill="none" />
+                            <ellipse rx="10" ry="4.5" transform="rotate(0 12 12)" stroke="#61DAFB" stroke-width="1.5"
+                                fill="none" />
+                        </svg>
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 bg-white rounded-lg cursor-pointer hover:-translate-y-1 duration-500 hover:shadow-md"
+                        title="Node.js">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="#339933">
+                            <path
+                                d="M12.0002 11.6665V23.7708L2.47942 18.2741V6.26577L12.0002 0.770874V11.6665ZM12.0002 0.770874L21.521 6.26577V18.2741L12.0002 23.7708V11.6665Z"
+                                fill="white" />
+                            <path
+                                d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
+                                fill="#339933" />
+                            <path d="M17 10H14V13H17V10Z" fill="white" />
+                        </svg>
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 bg-white rounded-lg cursor-pointer hover:-translate-y-1 duration-500 hover:shadow-md"
+                        title="Postman">
+                        <span class="text-[0.6rem] font-bold text-orange-500">POSTMAN</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------------------- PROJECTS KISMI ----------------------------- -->
+
+    <div id="projects" class="w-full px-[12%] py-20 scroll-mt-20 relative">
+        <h4 class="text-center text-xl mb-3">neler yaptım?</h4>
+        <h2 class="text-center text-5xl mb-12 flex items-center justify-center gap-3">son çalışmalarım <img
+                src="./assets/img/memoji/memoji-crossed.png" alt="" class="w-12 h-12 -mt-2"></h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project Card 1: Stock App (Index 1) -->
+            <a href="project-detail.html?id=1" class="block group">
+                <div
+                    class="border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 rounded-xl overflow-hidden hover:shadow-[4px_4px_0_#000] dark:hover:shadow-[4px_4px_0_#fff] hover:-translate-y-2 duration-500 transition-all cursor-pointer h-full">
+                    <div class="w-full h-48 bg-gray-200 dark:bg-gray-700 overflow-hidden">
+                        <img src="./assets/img/projects/StockAPI.gif" alt="Stock App"
+                            class="w-full h-full object-cover group-hover:scale-105 duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span
+                            class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded-full mb-2 inline-block">Fullstack</span>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Stock App</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">A comprehensive stock management
+                            application.</p>
+                        <div class="flex gap-2">
+                            <span
+                                class="text-xs text-gray-500 dark:text-gray-400 border border-gray-300 dark:border-gray-600 px-2 py-1 rounded">Node.js</span>
+                            <span
+                                class="text-xs text-gray-500 dark:text-gray-400 border border-gray-300 dark:border-gray-600 px-2 py-1 rounded">React</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Project Card 2: Car A Man (Index 2) -->
+            <a href="project-detail.html?id=7" class="block group">
+                <div
+                    class="border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 rounded-xl overflow-hidden hover:shadow-[4px_4px_0_#000] dark:hover:shadow-[4px_4px_0_#fff] hover:-translate-y-2 duration-500 transition-all cursor-pointer h-full">
+                    <div class="w-full h-48 bg-gray-200 dark:bg-gray-700 overflow-hidden">
+                        <img src="./assets/img/projects/car-a-man.gif" alt="Car A Man"
+                            class="w-full h-full object-cover group-hover:scale-105 duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span
+                            class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded-full mb-2 inline-block">Frontend</span>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Car A Man</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Creative styling project using HTML &
+                            CSS.</p>
+                        <div class="flex gap-2">
+                            <span
+                                class="text-xs text-gray-500 dark:text-gray-400 border border-gray-300 dark:border-gray-600 px-2 py-1 rounded">HTML</span>
+                            <span
+                                class="text-xs text-gray-500 dark:text-gray-400 border border-gray-300 dark:border-gray-600 px-2 py-1 rounded">CSS</span>
+                            <span
+                                class="text-xs text-gray-500 dark:text-gray-400 border border-gray-300 dark:border-gray-600 px-2 py-1 rounded">Animation</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Project Card 3: Amazon Shopping (Index 3) -->
+            <a href="project-detail.html?id=4" class="block group">
+                <div
+                    class="border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 rounded-xl overflow-hidden hover:shadow-[4px_4px_0_#000] dark:hover:shadow-[4px_4px_0_#fff] hover:-translate-y-2 duration-500 transition-all cursor-pointer h-full">
+                    <div class="w-full h-48 bg-gray-200 dark:bg-gray-700 overflow-hidden">
+                        <img src="./assets/img/projects/amazon-clone.gif" alt="Amazon Shopping"
+                            class="w-full h-full object-cover group-hover:scale-105 duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span
+                            class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded-full mb-2 inline-block">Frontend</span>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Amazon Shopping</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">A clone of the Amazon shopping
+                            interface.</p>
+                        <div class="flex gap-2">
+                            <span
+                                class="text-xs text-gray-500 dark:text-gray-400 border border-gray-300 dark:border-gray-600 px-2 py-1 rounded">HTML</span>
+                            <span
+                                class="text-xs text-gray-500 dark:text-gray-400 border border-gray-300 dark:border-gray-600 px-2 py-1 rounded">CSS</span>
+                            <span
+                                class="text-xs text-gray-500 dark:text-gray-400 border border-gray-300 dark:border-gray-600 px-2 py-1 rounded">JS</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="text-center mt-12">
+            <a href="all-projects.html"
+                class="inline-block px-8 py-3 border border-gray-400 rounded-full font-semibold hover:bg-gray-800 hover:text-white dark:bg-transparent dark:text-white dark:border-gray-500 dark:hover:bg-white dark:hover:text-black transition duration-300">Daha
+                Fazla Gör</a>
+        </div>
+    </div>
+
+    <!-- ----------------------------- FOOTER KISMI ----------------------------- -->
+    <footer id="contact"
+        class="w-full bg-[#0a0a0a] text-white pt-24 pb-12 px-[8%] relative overflow-hidden dark:bg-black">
+        <!-- Background Element -->
+        <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-gray-800 to-transparent">
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 border-b border-gray-900/50 pb-20 mb-12">
+            <!-- Brand Column (5 cols) -->
+            <div class="md:col-span-5 flex flex-col gap-8">
+                <div>
+                    <h1
+                        class="flex items-center gap-1 font-black text-5xl tracking-tighter hover:tracking-wide transition-all duration-300 cursor-default select-none">
+                        FERHAT<span class="text-blue-600 text-7xl leading-none mb-4 animate-pulse">.</span>
+                    </h1>
+                    <p class="text-gray-400 text-lg leading-relaxed max-w-md font-light mt-4">
+                        Building digital experiences that matter.
+                        <br>
+                        <span class="text-gray-500 text-sm">Focused on performance, aesthetics, and usability.</span>
+                    </p>
+                </div>
+                <div class="flex gap-4">
+                    <!-- Socials with premium hover -->
+                    <a href="https://github.com/yiitfeehat" target="_blank"
+                        class="w-12 h-12 rounded-full border border-gray-800 bg-gray-900/50 flex items-center justify-center text-gray-400 hover:text-white hover:border-white hover:bg-white/10 transition-all duration-300 group">
+                        <svg class="w-5 h-5 group-hover:scale-110 transition-transform" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.05-.015-2.055-3.33.72-4.035-1.605-4.035-1.605-.54-1.38-1.335-1.755-1.335-1.755-1.085-.735.09-.72.09-.72 1.2.09 1.83 1.23 1.83 1.23 1.065 1.815 2.805 1.29 3.495.99.105-.78.42-1.29.765-1.59-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405 1.02 0 2.04.135 3 .405 2.28-1.545 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.84.57A12.01 12.01 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/yiitferhat/" target="_blank"
+                        class="w-12 h-12 rounded-full border border-gray-800 bg-gray-900/50 flex items-center justify-center text-gray-400 hover:text-blue-500 hover:border-blue-500 hover:bg-blue-500/10 transition-all duration-300 group">
+                        <svg class="w-5 h-5 group-hover:scale-110 transition-transform" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/he.is.ferhat/" target="_blank"
+                        class="w-12 h-12 rounded-full border border-gray-800 bg-gray-900/50 flex items-center justify-center text-gray-400 hover:text-pink-500 hover:border-pink-500 hover:bg-pink-500/10 transition-all duration-300 group">
+                        <svg class="w-5 h-5 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="mailto:yiitferhat@gmail.com"
+                        class="w-12 h-12 rounded-full border border-gray-800 bg-gray-900/50 flex items-center justify-center text-gray-400 hover:text-green-500 hover:border-green-500 hover:bg-green-500/10 transition-all duration-300 group">
+                        <svg class="w-5 h-5 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Links Column (3 cols) -->
+            <div class="md:col-span-3">
+                <h4 class="text-white font-bold text-lg mb-8 relative inline-block">
+                    Navigasyon
+                    <span class="absolute -bottom-2 left-0 w-1/2 h-1 bg-blue-600 rounded-full"></span>
+                </h4>
+                <ul class="space-y-4">
+                    <li><a href="#top"
+                            class="text-gray-400 hover:text-white hover:translate-x-2 transition-all duration-300 block text-sm">Ana
+                            Sayfa</a></li>
+                    <li><a href="#about"
+                            class="text-gray-400 hover:text-white hover:translate-x-2 transition-all duration-300 block text-sm">Hakkımda</a>
+                    </li>
+                    <li><a href="all-projects.html"
+                            class="text-gray-400 hover:text-white hover:translate-x-2 transition-all duration-300 block text-sm">Çalışmalarım</a>
+                    </li>
+                    <li><a href="#skills"
+                            class="text-gray-400 hover:text-white hover:translate-x-2 transition-all duration-300 block text-sm">Yetenekler</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- CTA Column (4 cols) -->
+            <div
+                class="md:col-span-4 bg-gray-800/20 rounded-2xl p-8 border border-gray-800/50 hover:border-blue-900/50 transition-colors duration-500">
+                <h3 class="text-2xl font-bold text-white mb-2">Birlikte Çalışalım</h3>
+                <p class="text-gray-400 text-sm mb-8">
+                    Bir fikriniz mi var? Hayata geçirmek için sabırsızlanıyorum.
+                </p>
+                <a href="contact.html"
+                    class="group flex items-center justify-between w-full bg-white text-black px-6 py-4 rounded-xl font-bold hover:bg-blue-600 hover:text-white transition-all duration-300 dark:bg-blue-600 dark:text-white dark:hover:bg-blue-700">
+                    <span>iletişime geç</span>
+                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-600 font-medium">
+            <p>&copy; 2025 FERHAT. All rights reserved.</p>
+            <p class="flex items-center gap-1">
+                Designed & Built with
+                <span class="text-red-500 animate-pulse">❤️</span>
+                by <span class="text-gray-400">Ferhat Yiğit</span>
+            </p>
+        </div>
+    </footer>
+
+
+    <!-- ------------------------------ SCRİPTLER ------------------------------ -->
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
