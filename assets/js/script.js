@@ -69,6 +69,37 @@ if (themeToggleBtn) {
 
 const projects = [
     {
+        id: 10,
+        index: 4,
+        title: "Backend Recap API",
+        category: "Backend",
+        categoryColor: "text-red-600 bg-red-50",
+        description: "Comprehensive RESTful API with Node.js & Express.",
+        fullDescription: "Modern backend geliştirme süreçlerini pekiştirmek amacıyla geliştirilmiş, Node.js ve Express.js tabanlı kapsamlı bir RESTful API uygulaması. Kullanıcı kimlik doğrulama, ürün yönetimi ve güvenli API yapıları üzerine odaklanılmıştır.",
+        tools: ["Node.js", "Express", "MongoDB", "JWT"],
+        image: "./assets/img/projects/work-1.png",
+        features: [
+            "Advanced Auth (JWT/Cookie)",
+            "Rate Limiting & Security",
+            "Central Error Handling",
+            "Data Validation (Zod)"
+        ],
+        percentages: [
+            { name: "Node.js/Express", value: 60, color: "bg-green-500" },
+            { name: "Database", value: 20, color: "bg-green-700" },
+            { name: "Security", value: 20, color: "bg-red-500" }
+        ],
+        timeline: [
+            { date: "Step 1", title: "Setup", desc: "Proje yapılandırması ve veritabanı bağlantısı." },
+            { date: "Step 2", title: "Auth", desc: "JWT ve Cookie tabanlı kimlik doğrulama." },
+            { date: "Step 3", title: "Logic", desc: "Ürün yönetimi ve iş kuralları." },
+            { date: "Step 4", title: "Security", desc: "Helmet, Cors ve Rate Limit entegrasyonu." }
+        ],
+        gallery: [],
+        link: "project-detail.html?id=10",
+        githubLink: "https://github.com/yiitfeehat/BackendRecap-V1"
+    },
+    {
         id: 1,
         index: 1,
         title: "Stock App",
@@ -104,7 +135,7 @@ const projects = [
     },
     {
         id: 2,
-        index: 6,
+        index: 7,
         title: "Rent A Car API",
         category: "Backend",
         categoryColor: "text-red-600 bg-red-50",
@@ -135,7 +166,7 @@ const projects = [
     },
     {
         id: 3,
-        index: 4,
+        index: 5,
         title: "Pizza API",
         category: "Fullstack",
         categoryColor: "text-green-600 bg-green-50",
@@ -189,7 +220,7 @@ const projects = [
     },
     {
         id: 5,
-        index: 5,
+        index: 6,
         title: "Rock Paper Scissors",
         category: "Frontend",
         categoryColor: "text-blue-600 bg-blue-50",
@@ -219,7 +250,7 @@ const projects = [
     },
     {
         id: 6,
-        index: 6,
+        index: 8,
         title: "Guess The Number",
         category: "Frontend",
         categoryColor: "text-blue-600 bg-blue-50",
@@ -276,7 +307,7 @@ const projects = [
     },
     {
         id: 8,
-        index: 8,
+        index: 9,
         title: "Coffee Page",
         category: "Frontend",
         categoryColor: "text-blue-600 bg-blue-50",
@@ -304,7 +335,7 @@ const projects = [
     },
     {
         id: 9,
-        index: 9,
+        index: 10,
         title: "Sabahattin Ali",
         category: "Frontend",
         categoryColor: "text-blue-600 bg-blue-50",
