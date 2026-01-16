@@ -63,7 +63,8 @@
     </nav>
 
     <!-- ---------------------------- HEADER KISMI ----------------------------- -->
-    <div class="w-11/12 max-w-4xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+    <div
+        class="w-11/12 max-w-4xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 pt-24 md:pt-0">
         <img src="./assets/img/memoji/hello2.PNG" alt="" class=" w-36">
         <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-1 dark:text-gray-200">merhaba! ben Ferhat <img
                 src="./assets/img/ui/hand-icon.png" alt="" class="w-6"></h3>
@@ -76,9 +77,27 @@
             <a href="contact.html"
                 class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2 hover:shadow-lg hover:shadow-orange-500/30 transition-all">iletişim
                 kuralım? <img src="./assets/img/icons/right-arrow-white.png" alt="" class="w-4"></a>
-            <a href="./extras/Ferhat_Yigit_CV.pdf" download
-                class="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:bg-transparent dark:text-white dark:border-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">özgeçmişim<img
-                    src="./assets/img/icons/download-icon.png" alt="" class="w-4 dark:invert"></a>
+            <!-- Dual CV Dropdown -->
+            <div class="relative group">
+                <button
+                    class="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:bg-transparent dark:text-white dark:border-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors w-full justify-center">
+                    özgeçmişim
+                    <img src="./assets/img/icons/download-icon.png" alt="" class="w-4 dark:invert">
+                </button>
+
+                <!-- Dropdown Menu -->
+                <div
+                    class="absolute bottom-full left-0 w-full mb-2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 flex flex-col overflow-hidden z-20">
+                    <a href="./extras/ferhat_yigit_cv_tr.pdf" download
+                        class="px-4 py-2 text-sm text-center text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400 transition-colors border-b border-gray-100 dark:border-gray-800">
+                        Türkçe (TR)
+                    </a>
+                    <a href="./extras/ferhat_yigit_cv_en.pdf" download
+                        class="px-4 py-2 text-sm text-center text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                        English (EN)
+                    </a>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -270,7 +289,8 @@
                                 <h4
                                     class="font-bold text-gray-800 dark:text-gray-100 text-sm group-hover:text-blue-600 transition-colors">
                                     Marmara Üniversitesi</h4>
-                                <p class="text-gray-600 dark:text-gray-400 text-xs">Bilgisayar Programcılığı - (Uzaktan)</p>
+                                <p class="text-gray-600 dark:text-gray-400 text-xs">Bilgisayar Programcılığı - (Uzaktan)
+                                </p>
                                 <span class="text-[10px] text-gray-400 dark:text-gray-500 font-medium">2025 -
                                     Günümüz</span>
                             </div>

@@ -237,9 +237,22 @@
                 </div>
             </a>
 
-            <!-- CV / Resume Card - Professional Slate -->
-            <a href="./extras/Ferhat_Yigit_CV.pdf" download
-                class="md:col-span-2 group relative overflow-hidden bg-slate-800 p-8 rounded-3xl border border-slate-700 shadow-xl hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 transition-all duration-500 flex flex-col md:flex-row items-center gap-8">
+            <!-- CV / Resume Card - Professional Slate (Dual Language) -->
+            <div
+                class="md:col-span-2 group relative overflow-hidden bg-slate-800 p-8 rounded-3xl border border-slate-700 shadow-xl hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 transition-all duration-500 flex flex-col md:flex-row items-center gap-8 cursor-pointer">
+
+                <!-- Dropdown Menu (Absolute) -->
+                <div
+                    class="absolute inset-0 bg-slate-900/90 backdrop-blur-sm z-20 flex items-center justify-center gap-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                    <a href="./extras/ferhat_yigit_cv_tr.pdf" download
+                        class="px-6 py-3 bg-white text-slate-900 rounded-full font-bold hover:bg-gray-200 transition-colors transform translate-y-4 group-hover:translate-y-0 duration-300 delay-75">
+                        Türkçe İndir
+                    </a>
+                    <a href="./extras/ferhat_yigit_cv_en.pdf" download
+                        class="px-6 py-3 bg-blue-600 text-white rounded-full font-bold hover:bg-blue-700 transition-colors transform translate-y-4 group-hover:translate-y-0 duration-300 delay-150">
+                        English Download
+                    </a>
+                </div>
                 <!-- Radial Pattern -->
                 <div
                     class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]">
@@ -259,26 +272,17 @@
                             </path>
                         </svg>
                     </div>
-                    <div class="text-center md:text-left">
-                        <div
-                            class="inline-block px-3 py-1 bg-slate-700 text-slate-300 text-xs font-bold rounded-full mb-3 tracking-wider uppercase border border-slate-600">
-                            Doküman</div>
-                        <h3 class="text-2xl font-bold text-white mb-2">Güncel Özgeçmiş</h3>
-                        <p class="text-slate-400 text-sm max-w-sm">Profesyonel deneyim, eğitim ve yeteneklerimin detaylı
-                            özeti (PDF).</p>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Özgeçmiş / CV</h3>
+                        <p class="text-slate-400 text-sm mb-4">Detaylı tecrübe ve yetkinliklerim için indir.</p>
+                        <span class="text-xs text-slate-500 font-mono flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                            TR & EN Seçeneği Mevcut
+                        </span>
                     </div>
                 </div>
+            </div>
 
-                <div class="relative z-10 mt-6 md:mt-0">
-                    <span
-                        class="inline-flex items-center gap-3 bg-white text-slate-900 px-8 py-4 rounded-xl font-bold hover:bg-blue-500 hover:text-white transition-all duration-300 shadow-lg">
-                        İndir <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-                        </svg>
-                    </span>
-                </div>
-            </a>
 
         </div>
     </div>
